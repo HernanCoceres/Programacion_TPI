@@ -267,7 +267,7 @@ public void insertarConCodigoBarras(Producto producto, CodigoBarras codigo) thro
 | **Patrón DAO** | ✅ | GenericDAO + implementaciones concretas |
 | **DAOs con conexión externa** | ✅ | Métodos aceptan Connection para transacciones |
 | **Capa Service con transacciones** | ✅ | Commit/rollback en todos los servicios |
-| **CRUD completo** | ✅ | 8/9 operaciones implementadas |
+| **CRUD completo** | ✅ | 9 operaciones implementadas |
 | **Eliminación lógica** | ✅ | Campo `eliminado` en clase Base |
 | **Validaciones de negocio** | ✅ | En capa Service con mensajes descriptivos |
 | **Manejo de excepciones** | ✅ | Try-catch en todas las capas |
