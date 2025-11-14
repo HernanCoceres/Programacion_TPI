@@ -33,7 +33,13 @@ El sistema implementa un **sistema de gestión de productos** para depósitos o 
 - **Validaciones de negocio** robustas
 
 ---
+## 🗂️ Diagrama UML
 
+![Diagrama UML del Sistema de Gestión de Productos](https://github.com/hernanbula/Programacion_TPI/tree/feature/menu-handler/UML/TPI_P2.png)
+
+*Diagrama de clases que muestra la relación 1→1 unidireccional entre Producto y CódigoBarras, así como la arquitectura en capas del sistema.*
+
+---
 ## ⚙️ Requisitos del Sistema
 
 ### Software Requerido
