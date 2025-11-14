@@ -4,6 +4,14 @@
  */
 package service;
 
+/**
+ * @authors 
+ * Gaston Alberto Cejas, 
+ * Hernan Cóceres, 
+ * Claudio Rodriguez, 
+ * Hernan E.Bula
+ */
+
 import DAO.ProductoDAO;
 import config.DatabaseConnection;
 import model.Producto;
