@@ -35,7 +35,7 @@ El sistema implementa un **sistema de gestión de productos** para depósitos o 
 ---
 ## 🗂️ Diagrama UML
 
-![Diagrama UML del Sistema de Gestión de Productos](https://github.com/hernanbula/Programacion_TPI/tree/feature/menu-handler/UML/TPI_P2.png)
+![Ver >> Diagrama UML del Sistema](https://raw.githubusercontent.com/hernanbula/Programacion_TPI/feature/menu-handler/UML/TPI_P2.png)
 
 *Diagrama de clases que muestra la relación 1→1 unidireccional entre Producto y CódigoBarras, así como la arquitectura en capas del sistema.*
 
