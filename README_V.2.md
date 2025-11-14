@@ -174,7 +174,7 @@ public void insertar(Producto entidad, Connection conn) throws Exception
 │   4. ↪ Eliminar producto          │
 │   5. ↪ Asignar código barras      │
 │                                   │
-│  ✅ GESTIÓN DE CÓDIGOS 𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃 │
+│  ✅ GESTIÓN DE CÓDIGOS 𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃        │
 │   6. ↪ Crear código de barras     │
 │   7. ↪ Listar códigos de barras   │
 │   8. ↪ Actualizar código          │
