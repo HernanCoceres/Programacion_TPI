@@ -186,25 +186,24 @@ public void insertar(Producto entidad, Connection conn) throws Exception
 
 ### Funcionalidades CRUD Completas:
 
-#### Gestión de Productos (Opciones 1-4)
+#### Gestión de Productos (Opciones 1-5)
 | Operación | Descripción | Validaciones |
 |-----------|-------------|--------------|
-| **Crear** | Producto con/sin código de barras | Nombre ≠ vacío, Precio ≥ 0, Stock ≥ 0 |
-| **Listar** | Todos, por ID, nombre o categoría | Filtros con manejo de errores |
-| **Actualizar** | Campos individuales | Validaciones por campo |
-| **Eliminar** | Soft delete | Confirmación requerida |
+| **1. Crear** | Producto con/sin código de barras | Nombre ≠ vacío, Precio ≥ 0, Stock ≥ 0 |
+| **2. Listar** | Todos, por ID, nombre o categoría | Filtros con manejo de errores |
+| **3. Actualizar** | Campos individuales | Validaciones por campo |
+| **4. Eliminar** | Soft delete | Confirmación requerida |
+| **5. Asignar código** | Asignar código de barras a producto existente | Producto y código deben existir, relación 1→1 preservada |
 
 #### Gestión de Códigos de Barras (Opciones 6-9)
 | Operación | Descripción | Validaciones |
 |-----------|-------------|--------------|
-| **Crear** | Código independiente | Valor único, Tipo válido |
-| **Listar** | Todos los códigos activos | - |
-| **Actualizar** | Valor, tipo, observaciones | Mantener unicidad del valor |
-| **Eliminar** | Soft delete | Confirmación requerida |
+| **6. Crear** | Código independiente | Valor único, Tipo válido |
+| **7. Listar** | Todos los códigos activos | - |
+| **8. Actualizar** | Valor, tipo, observaciones | Mantener unicidad del valor |
+| **9. Eliminar** | Soft delete | Confirmación requerida |
 
-#### Funcionalidad de relación 
-- **Opción 5**: Asignar código de barras a producto existente
-
+---
 ---
 
 ## 🔗 Relación 1→1 Unidireccional
