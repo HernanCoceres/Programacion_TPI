@@ -40,6 +40,22 @@ El sistema implementa un **sistema de gestión de productos** para depósitos o 
 *Diagrama de clases que muestra la relación 1→1 unidireccional entre Producto y CódigoBarras, así como la arquitectura en capas del sistema.*
 
 ---
+
+## 🎥 Video Explicativo
+
+📹 **Enlace al video de demostración:**  
+[INSERTAR_ENLACE_AL_VIDEO_AQUÍ]
+
+**Contenido del video (15 minutos):**
+- ✅ Presentación de los 4 integrantes
+- ✅ Demostración del flujo CRUD completo
+- ✅ Explicación de la relación 1→1 funcionando
+- ✅ Análisis de código por capas (entities, dao, service, main)
+- ✅ Demostración de transacción con rollback ante error
+- ✅ Evidencia de la integridad referencial y validaciones
+
+---
+
 ## ⚙️ Requisitos del Sistema
 
 ### Software Requerido
@@ -304,21 +320,6 @@ public void insertarConCodigoBarras(Producto producto, CodigoBarras codigo) thro
 - **Rollback automático** en caso de error
 - **Conexiones manejadas** con try-with-resources
 - **Auto-commit controlado** manualmente
-
----
-
-## 🎥 Video Explicativo
-
-📹 **Enlace al video de demostración:**  
-[INSERTAR_ENLACE_AL_VIDEO_AQUÍ]
-
-**Contenido del video (15 minutos):**
-- ✅ Presentación de los 4 integrantes
-- ✅ Demostración del flujo CRUD completo
-- ✅ Explicación de la relación 1→1 funcionando
-- ✅ Análisis de código por capas (entities, dao, service, main)
-- ✅ Demostración de transacción con rollback ante error
-- ✅ Evidencia de la integridad referencial y validaciones
 
 ---
 
