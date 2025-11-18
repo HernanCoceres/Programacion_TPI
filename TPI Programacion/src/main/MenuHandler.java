@@ -518,14 +518,14 @@ public class MenuHandler {
             codigoBarrasActualizar.setTipo(elegirTipoCodigo());
             codigoBarrasActualizar.setFechaAsignacion(LocalDate.now());
 
-            System.out.print("Valor actual (Enter para mantener el valor actual): " + codigoBarrasActualizar.getValor() + "\nO ingrese el nuevo valor: ");
+            System.out.print("Valor actual (Enter para mantener el valor actual): " + codigoBarrasActualizar.getValor() + "\nO ingrese el nuevo valor (opcional): ");
             String valor = scanner.nextLine().trim();
             if (!valor.isEmpty()) {
                 codigoBarrasActualizar.setValor(valor);
             }
 
             System.out.println("Observaciones actuales (Enter para mantener el valor actual): " + codigoBarrasActualizar.getObservaciones());
-            String observaciones = validarEntradaStringCantidadChar(scanner, "nuevas observaciones", 255);
+            String observaciones = validarEntradaStringCantidadChar(scanner, "nuevas observaciones (opcional)", 255);
             if (!observaciones.isEmpty()) {
                 codigoBarrasActualizar.setObservaciones(observaciones);
             }
@@ -619,8 +619,6 @@ public class MenuHandler {
         String valor = validarEntradaString(scanner, "Valor", 20);
         LocalDate fechaAsignacion = LocalDate.now();
         String observaciones = validarEntradaStringCantidadChar(scanner, "Observaciones (opcional)", 255);
-        String observacionesFinal = observaciones;
-
         return new CodigoBarras(id, false, tipo, valor, fechaAsignacion, observaciones);
     }
 
