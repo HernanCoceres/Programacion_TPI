@@ -196,7 +196,7 @@ public class DatabaseConnection {
 - **Host:** localhost
 - **Puerto:** 3306
 - **Usuario:** root
-- **Contraseña:** [vacía]
+- **Contraseña:** [vacía] // ← CONFIGURAR AQUÍ CONTRASEÑA LOCAL
 - **Base de datos:** depositotpi (se crea automáticamente)
 
 ---
@@ -293,6 +293,23 @@ public void insertarConCodigoBarras(Producto producto, CodigoBarras codigo) thro
 
 ---
 
+## 📚 Documentación Javadoc
+
+El proyecto incluye **documentación Javadoc completa** generada automáticamente, disponible en la carpeta [`/dist/javadoc/`](https://github.com/hernanbula/Programacion_TPI/tree/main/TPI%20Programacion/dist/javadoc).
+
+**Características de la documentación:**
+- **100% de cobertura**: Todas las clases y métodos documentados
+- **Documentación técnica completa**: Parámetros, retornos y excepciones
+- **Autoría del equipo**: Cada clase incluye los 4 integrantes como autores
+- **Ejemplos de uso**: Casos complejos incluyen ejemplos prácticos
+
+**Acceso rápido:**
+- Abrir `dist/javadoc/index.html` en cualquier navegador
+- Navegación completa por paquetes y clases
+- Búsqueda integrada de métodos y clases
+
+---
+
 ## ✅ Checklist de Cumplimiento TFI
 
 | Requisito | Estado | Observaciones |
@@ -312,6 +329,7 @@ public void insertarConCodigoBarras(Producto producto, CodigoBarras codigo) thro
 | **Inicialización automática BD** | ✅ | DatabaseConnection.inicializarBaseDatos() |
 | **Scripts SQL** | ✅ | Incluidos en el proyecto |
 | **Diagrama UML** | ✅ | Incluido en documentación |
+| **Javadocs** | ✅ | Documentación completa y generada en `/dist/javadoc/` |
 
 ---
 
