@@ -516,4 +516,4 @@ Usuario recibe: "✓ Código de barras asignado exitosamente"
 **Versión**: 1.0  
 **Total Historias de Usuario**: 12  
 **Total Reglas de Negocio**: 32  
-**Arquitectura**: 5 capas (Main → Service → DAO → Models → Config)
+**Arquitectura**: - 4 capas (model, dao, service, main) + 1 capa auxiliar (config)
