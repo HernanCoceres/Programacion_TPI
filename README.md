@@ -37,7 +37,7 @@ El sistema implementa un **sistema de gestión de inventario** para depósitos o
 
 **Elementos principales del diagrama:**
 - **Relación 1→1 unidireccional**: Producto → CodigoBarras
-- **Arquitectura en 5 capas**: config, model, dao, service, main
+- **Arquitectura en 4 capas + 1 capa auxiliar (config)**: model, dao, service, main
 - **Clase Base**: Implementa eliminación lógica con `id: Long` y `eliminado: Boolean`
 - **Enumeraciones**: CategoriaProducto y EnumTipo para validaciones
 - **Patrón DAO**: GenericDAO con implementaciones específicas
@@ -97,6 +97,22 @@ El sistema implementa un **sistema de gestión de inventario** para depósitos o
 - Valida que ambos existan y no estén eliminados
 - Preserva la relación 1→1 (un producto solo puede tener un código)
 - Operación transaccional con commit/rollback
+
+---
+
+## 🎥 Video Explicativo
+
+📹 **Enlace al video de demostración:**  
+[[ENLACE_AL_VIDEO_AQUÍ](https://youtu.be/QzxX1T7QYRg)]
+
+**Contenido del video (15 minutos):**
+- ✅ Presentación de los 4 integrantes
+- ✅ Demostración del flujo CRUD completo
+- ✅ Explicación de la relación 1→1 funcionando
+- ✅ Análisis de código por capas (models, dao, service, main + config)
+- ✅ Demostración de transacción con rollback ante error
+- ✅ Evidencia de la integridad referencial y validaciones
+- ✅ Demostración de eliminación y recuperación lógica
 
 ---
 
@@ -322,22 +338,6 @@ public void insertarConCodigoBarras(Producto producto, CodigoBarras codigo) thro
 - **Rollback automático** en caso de error
 - **Conexiones manejadas** con try-with-resources
 - **Auto-commit controlado** manualmente
-
----
-
-## 🎥 Video Explicativo
-
-📹 **Enlace al video de demostración:**  
-[INSERTAR_ENLACE_AL_VIDEO_AQUÍ]
-
-**Contenido del video (15 minutos):**
-- ✅ Presentación de los 4 integrantes
-- ✅ Demostración del flujo CRUD completo
-- ✅ Explicación de la relación 1→1 funcionando
-- ✅ Análisis de código por capas (models, dao, service, main)
-- ✅ Demostración de transacción con rollback ante error
-- ✅ Evidencia de la integridad referencial y validaciones
-- ✅ Demostración de eliminación y recuperación lógica
 
 ---
 

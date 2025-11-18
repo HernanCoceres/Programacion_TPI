@@ -1,11 +1,10 @@
 package main;
 
 /**
- * @authors 
- * Gaston Alberto Cejas, 
- * Hernan Cóceres, 
- * Claudio Rodriguez, 
- * Hernan E.Bula
+@author Hernan Cóceres
+@author Claudio Rodriguez
+@author Hernan E.Bula
+@author Gaston Alberto Cejas
  */
 
 import java.time.LocalDate;
@@ -444,7 +443,8 @@ public class MenuHandler {
         EnumTipo tipo = elegirTipoCodigo();
         String valor = validarEntradaString(scanner, "Valor", 20);
         LocalDate fechaAsignacion = LocalDate.now();
-        String observaciones = validarEntradaStringOpcional(scanner, "Observaciones");
+        String observaciones = validarEntradaStringCantidadChar(scanner, "Observaciones (opcional)", 255);
+        String observacionesFinal = observaciones;
 
         return new CodigoBarras(id, false, tipo, valor, fechaAsignacion, observaciones);
     }
@@ -579,8 +579,8 @@ public class MenuHandler {
                 codigoBarrasActualizar.setValor(valor);
             }
 
-            System.out.print("Observaciones actuales (Enter para mantener el valor actual): " + codigoBarrasActualizar.getObservaciones() + "\n O ingrese nuevas observaciones: ");
-            String observaciones = scanner.nextLine().trim();
+            System.out.print("Observaciones actuales (Enter para mantener el valor actual): " + codigoBarrasActualizar.getObservaciones());
+            String observaciones = validarEntradaStringCantidadChar(scanner, "O ingrese nuevas observaciones", 255);
             if (!observaciones.isEmpty()) {
                 codigoBarrasActualizar.setObservaciones(observaciones);
             }
@@ -815,34 +815,32 @@ public class MenuHandler {
     }
 
     /**
-     * Valida una cadena de texto opcional.
-     * Permite que el campo esté vacío. No valida longitud máxima.
+     * Valida una cadena de texto con límite de longitud pero también puede ser vacia.
      *
      * @param scanner Scanner para leer la entrada
      * @param nombreVariable Nombre del campo a validar
-     * @param maxChar Parámetro ignorado (mantenido para compatibilidad con la firma)
-     * @return Cadena válida (puede ser null si se presiona Enter sin ingresar nada)
+     * @param maxChar Longitud máxima permitida
+     * @return Cadena válida dentro del límite de caracteres
+     * @throws IllegalArgumentException si maxChar es menor o igual a cero
      */
-    static String validarEntradaStringOpcional(Scanner scanner, String nombreVariable, int maxChar) {
-        System.out.print("Ingrese " + nombreVariable + " (opcional, Enter para omitir): ");
-        String variable = scanner.nextLine().trim();
+    static String validarEntradaStringCantidadChar(Scanner scanner, String nombreVariable, int maxChar) {
+        if (maxChar <= 0) {
+            throw new IllegalArgumentException("El máximo de caracteres debe ser positivo.");
+        }
 
-        // Si está vacío, retornar null (es opcional)
-        if (variable.isEmpty()) {
-            return null;
+        String variable = "";
+        boolean entradaValida = false;
+
+        while (!entradaValida) {
+            System.out.print("Ingrese " + nombreVariable + ": ");
+            variable = scanner.nextLine().trim();
+
+            if (variable.length() > maxChar) {
+                System.out.println(nombreVariable + " no puede tener más de " + maxChar + " caracteres. Inténtelo de nuevo.");
+            } else {
+                entradaValida = true;
+            }
         }
         return variable;
-    }
-
-    /**
-     * Valida una cadena de texto opcional sin límite de longitud.
-     * Permite que el campo esté vacío.
-     *
-     * @param scanner Scanner para leer la entrada
-     * @param nombreVariable Nombre del campo a validar
-     * @return Cadena válida (puede ser null si se presiona Enter sin ingresar nada)
-     */
-    static String validarEntradaStringOpcional(Scanner scanner, String nombreVariable) {
-        return validarEntradaStringOpcional(scanner, nombreVariable, Integer.MAX_VALUE);
     }
 }
